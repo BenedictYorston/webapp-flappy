@@ -6,4 +6,5 @@ function printer(error, stdout, stderr) {
   console.log(stdout);
   console.warn(stderr);
 }
+console.log("runningScript");
 exec("git push origin master:gh-pages --force", printer);
