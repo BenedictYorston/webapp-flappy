@@ -1,0 +1,10 @@
+Batman vs Superman!
+
+
+
+How to play:
+<ul>
+<li> -Press SPACE (Player1) or Q (Player2) to flap your wings. </li>
+<li> - Avoid the pipes. </li>
+<li> - Last one flying wins! </li>
+</ul>

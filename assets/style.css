@@ -1,0 +1,35 @@
+h1 {
+  color: red;
+}
+h2 {
+  color:blue ;
+}
+h3 {
+  color: orange;
+}
+h4 {
+  color: turquoise;
+}
+h5 {
+  color: pink;
+}
+h6 {
+  color: navy;
+}
+.gold {
+  color: gold
+}
+.silver {
+  color: silver
+}
+.bronze {
+  color: orange
+}
+#gameLink {
+  text-align: center;
+
+}
+.alignC{
+  text-align: center;
+
+}
