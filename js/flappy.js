@@ -41,15 +41,17 @@ game.load.audio("theme", "../assets/theme.mp3");
 function create() {
 game.sound.play("theme");
 
-  game.stage.setBackgroundColor ("#FFFFFF");
+  game.stage.setBackgroundColor ("#ff0000");
   //  set the background colour of the scene
 
   var backround = game.add.image(0, 0, "backgroundImg");
   backround.width = 790;
   backround.height = 400;
 
+game.add.text(100, 20, "BATMAN:");
+game.add.text(100, 50, "SUPERMAN:");
 
-  game.add.text(50, 300, "BATMAN VS SUPERMAN", {font: "45px Charcoal CY", fill: "#FF0000"});
+  game.add.text(375, 30, "BATMAN VS SUPERMAN", {font: "35px Charcoal CY", fill: "#FF0000"});
   //game.add.sprite(250, 350, "playerImg");
 //  game.input
   //.onDown
@@ -60,6 +62,9 @@ game.sound.play("theme");
   game.input
   .keyboard.addKey(Phaser.Keyboard.Q)
   .onDown.add(QHandler);
+  game.input
+  .keyboard.addKey(Phaser.Keyboard.ENTER)
+  .onDown.add(EnHandler);
 
 
   //alert(score);
@@ -93,8 +98,8 @@ player2.body.gravity.y = 500;
 player1.scale.setTo(0.75,0.75);
 player2.scale.setTo(0.75,0.75);
 
-labelScore1 = game.add.text(350, 20, "0");
-labelScore2 = game.add.text(350, 50, "0");
+labelScore1 = game.add.text(300, 20, "0");
+labelScore2 = game.add.text(300, 50, "0");
 
 generatePipeR();
 generatePipeG();
@@ -191,6 +196,10 @@ game.sound.play("gunShot");
 }
 function QHandler() {
 game.sound.play("punch");
+}
+
+function EnHandler(){
+location.reload();
 }
 /*function changeScore2(){
 
@@ -345,11 +354,12 @@ function loseHealth2b(){
 
 
           function gameFinished(){
+            game.add.text(225, 320, "Press Enter to Restart", {font: "40px Charcoal CY", fill: "#ff0000"});
 if(score1>score2){
-      game.add.text(50, 150, "Batman is Victorious!",{font: "80px Charcoal CY", fill: "#1f7a1f"});
+      game.add.text(50, 250, "Batman is Victorious!",{font: "80px Charcoal CY", fill: "#000000"});
 }
   else if (score2>score1) {
-    game.add.text(10, 150, "Superman is Victorious!", {font: "80px Charcoal CY", fill: "#0000ff"});
+    game.add.text(10, 250, "Superman is Victorious!", {font: "80px Charcoal CY", fill: "#0000ff"});
 
   }
   else {
